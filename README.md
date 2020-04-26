@@ -1,6 +1,6 @@
 # Secret-Scientist
-A Secret Scientist wants a client-only based crypto solution
 
+A Secret Scientist wants a client-only based crypto solution
 
 # Story
 
@@ -8,7 +8,7 @@ A scientist working at a secret organization to trace the origins of the COVID-1
 
 Because of the political nature of this problem and the far-reaching consequences that can impact the entire world, secrecy is of paramount importance
 
-# Requirements 
+# Requirements
 
 Your mission, if you choose to accept, is to create a frontend-only solution to this complex cryptographic problem
 
@@ -17,28 +17,32 @@ Your mission, if you choose to accept, is to create a frontend-only solution to 
 - Previous results should be available in the list
 
 ## Algorithm
+
 - The string will be in one of the two formats: "S" or "S.K"
 - If there is a no ".", that means it's a Decrypted string
 - If the dot exists, we have an enxcrypted string and the K after the dot is the key that will be used to decrypt the string
 
 ### Encryption Algorithm:
+
 - The Key for encryption is a a positive integer. Default value is 0
 - The string will only contain uppercase letters A-Z
 - The encryption revolves around creation of Narsisstic Numbers(also Armstrong Numbers). A narsisstic number is a number where if the number of digits in the number is L, then the sum of each digit raised to power of L equals the number
-e.g 9474  ( = 9 ^ 4 + 4 ^ 4 + 7 ^ 4 + 4 ^ 4 ), number of digits = 4
+  e.g 9474 ( = 9 ^ 4 + 4 ^ 4 + 7 ^ 4 + 4 ^ 4 ), number of digits = 4
 - For every character of the string, convert it into a number based on its sequence (A = 0, B = 1, ...). Add the _Key_ number to it. This gives you the nth Narsissistic Number in the sequence
-    - e.g String = 'C....'
-    - Key = 0
-    - C = 2
-    - NN Index, i  = 2 + 0 
-    - Encrypted character = NarsissisticNumber(i) = 3 (3 is the 3rd NN in sequence of all valid NN)
-- Append all the numbers one after the other as a string, 
+  - e.g String = 'C....'
+  - Key = 0
+  - C = 2
+  - NN Index, i = 2 + 0
+  - Encrypted character = NarsissisticNumber(i) = 3 (3 is the 3rd NN in sequence of all valid NN)
+- Append all the numbers one after the other as a string,
   E.g [2, 5, 6, 153] = "256152"
 - Select the max token possible as an index of the alphabet to convert into. A-Z is the range, so, that's 0-25
-  
-  E.g "256152" = [25], [6], [1], [5], [2] = Z G B F C = "ZGBFC"
+
+  E.g "256152" = [25], [6], [15], [2] = Z G P C = "ZGPC"
+
 - Encrypted String is the result of the previous operation
 
 ### Decryption Algorithm:
+
 - Break the string into the `S<sub>E</sub>` and `Key`
 - Reverse the steps during encryption to get the unencrypted string
