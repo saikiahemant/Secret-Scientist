@@ -1,38 +1,36 @@
 <html>
-    <head>
-        <link rel="stylesheet" href = "style.css">
-    </head>
-    <body>
-        <!-- <div>
-            <label for="text">Enter input text</label>
-            <input type=text placeholder="Text" id="text" name="text"> </input>
-        </div>
-        <div>
-            <label for="key">Enter key</label>
-            <input type=text placeholder="Key" id="key"> </input>
-        </div>
-        <div>
-            <span id="encryptedString"></span>
-        </div>
-        <button id="encryptButton">ClickMe</button> -->
-        <div class = "container">
-        
-            <div class= "form-input">
-            <label for="text"><b>Enter your text</b></label>
-            <input type="text" id="text" placeholder="Text to be encrypted">
-        </div>
-        <div class= "form-input">
-            <label for="key"><b>Enter your text</b></label>
-            <input type="text" id="key" placeholder="Key for encryption">
-        </div>
-        <div class="form-input">
-            <input type=text id="encryptedString">
-        </div>
-            <button type="button" id="encryptButton">Encrypt</button>
 
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="inputs">
+            <div class="form-input">
+                <!-- <label for="text"><b>Enter your text</b></label> -->
+                <input type="text" id="text" placeholder="Text to be encrypted">
+            </div>
+            <div class="form-input">
+                <!-- <label for="key"><b>Enter your text</b></label> -->
+                <input type="text" id="key" placeholder="Key for encryption">
+            </div>
         </div>
-    </body>
-    
+        <button type="button" id="encryptButton">Encrypt</button>
+        <div class="outputs">
+            <div class="form-input">
+                <!-- <label for="text"><b>Enter your text</b></label> -->
+                <p id="input"></p>
+            </div>
+            <div class="form-input">
+                <!-- <label for="key"><b>Enter your text</b></label> -->
+               <p id="output"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
 <script src="local.js"></script>
-    
+
 </html>

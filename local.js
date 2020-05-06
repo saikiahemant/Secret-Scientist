@@ -9,7 +9,8 @@
         key: document.querySelector("#key"),
         outputString: document.querySelector("#encryptedString"),
         btn: document.querySelector("#encryptButton"),
-        output: document.querySelector("#encryptedString")
+        inpt: document.querySelector("#input"),
+        otpt: document.querySelector("#output")
     };
 
     const ControlMethods = {
@@ -149,14 +150,13 @@ DOMStrings.btn.addEventListener('click', (e) => {
 
     ControlMethods.encrypt(input, key).then((ecncryptedText)=>{
         console.log(ecncryptedText);
-        DOMStrings.output.value = ecncryptedText;
-        DOMStrings.output.style.display = "block";
+        DOMStrings.inpt.innerHTML = input;
+        DOMStrings.otpt.innerHTML = ecncryptedText;
     }
     ).catch(er=>{
         console.log("Uh oh");
     });
-    debugger;
-    console.log("Oh yeah !!");
+
 });
 
 }

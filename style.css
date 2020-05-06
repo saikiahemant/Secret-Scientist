@@ -7,7 +7,11 @@ body{
     background: #4CAF50;
   }
   input, label {
-    display:inline-block;
+   
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: solid;
+    height: 30px;
 }
 
 .container {
@@ -22,18 +26,25 @@ body{
     -webkit-box-shadow: 21px 23px 17px -5px rgba(0,0,0,0.51);
     -moz-box-shadow: 21px 23px 17px -5px rgba(0,0,0,0.51);
     box-shadow: 21px 23px 17px -5px rgba(0,0,0,0.51);
+   
+  }
+  .inputs{
+    display: flex;
+    justify-content: center;
   }
 
+  .outputs{
+    font-size: medium;
+  }
   #encryptedString{
   display: none    
 }
-/* .container{
-    text-align: center;
-    margin: 0 auto;
-} */
+
   .form-input
   {
     padding : 15px;
+    border-width: medium;
+    display:inline-block ;
   }
 
   #encryptButton{
